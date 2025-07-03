@@ -1,0 +1,194 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo img {
+  margin-left: 10px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-top: 30px;
+  margin-right: 20px;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover, 
+header nav ul li a.active {
+  color: #ffcc00;
+}
+
+/* Facilities Section */
+.facilities-hero {
+  text-align: center;
+  padding: 20px 5px;
+  background-color: #e0f7fa;
+  color: #004080;
+}
+
+.facilities-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.facilities-hero p {
+  font-weight: bold;
+  font-family: cursive;
+  font-size: 1.5rem;
+  color: darkgreen;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.facility-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+}
+
+.facility-item {
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.facility-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.facility-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.facility-item h2 {
+  font-size: 1.8rem;
+  color: #004080;
+  margin-bottom: 15px;
+}
+
+.facility-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.facility-item:hover img {
+  transform: scale(1.03);
+}
+
+/* Call to Action */
+.call-to-action {
+  padding: 30px 5px;
+  margin: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  background: #e0f7fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.call-to-action h2 {
+  font-size: 2rem;
+  color: #FF6107;
+  margin-bottom: 15px;
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action .cta-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 1.1rem;
+}
+
+.call-to-action .cta-button:hover {
+  background-color: #ffcc00;
+  color: #004080;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .facility-images {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header nav ul {
+    margin-top: 15px;
+    margin-right: 0;
+  }
+  
+  .facilities-hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .facilities-hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .facility-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .facility-item h2 {
+    font-size: 1.5rem;
+  }
+}
