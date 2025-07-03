@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const marqueeContent = document.querySelector('.marquee-content');
+    if (marqueeContent) {
+        // Clone all children for seamless looping
+        marqueeContent.innerHTML += marqueeContent.innerHTML;
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM fully loaded and parsed');
   
   document.getElementById('request-service').addEventListener('click', function() {
